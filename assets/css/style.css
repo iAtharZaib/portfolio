@@ -1021,9 +1021,6 @@ ul.slick-dots button {
     padding: 0 20px;
     cursor: pointer;
 }
-.marquee-img-main img:hover {
-    filter: var(--icons-filter);
-}
 /*-----------------------[ 12.Section Six CSS ]------------------------*/
 .section-heading-text {
     color: var(--main-text);
