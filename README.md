@@ -1,32 +1,38 @@
-# Athar Zaib — Portfolio Website
-
-This is the personal portfolio website of **Athar Zaib**, showcasing skills, projects, endorsements, and contact information.  
-It is built to highlight web & mobile development, UI/UX, branding, and digital strategy.
 
 ---
 
-## 🛠️ Features & Highlights
+## ✨ Features
 
-- Responsive design for both desktop and mobile  
-- Sections: Home, About, Services, Portfolio, Endorsements, Resume, Contact  
-- Project showcase with image gallery and filters  
-- Endorsements / testimonials carousel  
-- Contact form with external submission (e.g. via Formspree or custom backend)  
-- Social links and client logos  
-- Clean, modern UI with smooth interactions  
-
----
-
-## 🧰 Tech Stack & Tools
-
-- HTML, CSS, JavaScript  
-- [Optional: React / Vue / whatever framework if used]  
-- CSS animations & transitions  
-- Responsive layout (Flexbox / Grid)  
-- External form submission (e.g. Formspree, as you plan)  
-- Hosting via GitHub Pages
+- 🎨 Clean, minimal, and creative design  
+- 📱 Fully responsive for all devices  
+- ⚡ Optimized performance and smooth animations  
+- 🔗 Direct links to social profiles and projects  
+- 📃 Downloadable PDF resume  
+- 💬 Endorsements and testimonials section  
 
 ---
 
-## 📁 Folder Structure (Example)
+## 🧠 Future Enhancements
 
+- Add a blog section for design and development insights  
+- Integrate dark/light mode toggle  
+- Include CMS-based project management for easier updates  
+
+---
+
+## 🧑‍💻 Author
+
+**Athar Zaib**  
+Creative Front-End & Mobile App Developer  
+🌍 Dubai | Available Worldwide  
+
+- Portfolio: [https://iatharzaib.github.io/portfolio](https://iatharzaib.github.io/portfolio)  
+- LinkedIn: [linkedin.com/in/iatharzaib](https://linkedin.com/in/iatharzaib)  
+- Email: iatharzaib@gmail.com 
+
+---
+
+## 📜 License
+
+This project is open for personal showcase use only.  
+All images, logos, and designs are © 2025 Athar Zaib.
