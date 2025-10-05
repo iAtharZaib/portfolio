@@ -1219,20 +1219,11 @@ ul.slick-dots button {
     background-size: cover;
     background-position: center;
     min-height: 180px;
-    -ms-transition: transform 0.7s cubic-bezier(.4, .2, .2, 1);
-    transition: transform 0.7s cubic-bezier(.4, .2, .2, 1);
-    -webkit-transition: transform 0.7s cubic-bezier(.4, .2, .2, 1);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     background: var(--section-background);
     border: 2px dashed var(--primary-color);
     border-radius: 20px;
-    transition: all 0.3s ease-in-out;
-}
-.flip-box-front:hover,
-.flip-box-back:hover {
-    border: 2px dashed var(--main-text);
-    border-radius: 0;
 }
 .flip-box .inner {
     position: absolute;
