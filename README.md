@@ -28,7 +28,7 @@ Creative Front-End & Mobile App Developer
 
 - Portfolio: [https://iatharzaib.github.io/portfolio](https://iatharzaib.github.io/portfolio)  
 - LinkedIn: [linkedin.com/in/iatharzaib](https://linkedin.com/in/iatharzaib)  
-- Email: iatharzaib@gmail.com 
+- Email: contact@atharzaib.com 
 
 ---
 
