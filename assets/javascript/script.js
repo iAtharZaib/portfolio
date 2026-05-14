@@ -249,3 +249,100 @@ function activeMenu() {
 }
 activeMenu();
 window.addEventListener("scroll", activeMenu);
+
+/*------------------------------------- ENHANCED INTERACTIVE EFFECTS -------------------------------------*/
+
+/* Smooth Parallax Scroll Effect */
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const parallaxElements = document.querySelectorAll('.fade_up, .fade_down, .zoom_in');
+    
+    parallaxElements.forEach((el, index) => {
+        if (el.offsetParent !== null) {
+            el.style.transform = `translateY(${scrolled * 0.05 * (index % 2 === 0 ? 1 : -1)}px)`;
+        }
+    });
+});
+
+/* Button Ripple Effect */
+document.querySelectorAll('.aryaBtn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        ripple.classList.add('ripple');
+        
+        this.appendChild(ripple);
+        
+        setTimeout(() => ripple.remove(), 600);
+    });
+});
+
+/* Gallery Image Zoom on Hover */
+document.querySelectorAll('.gallery-item-sub').forEach(item => {
+    item.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.12) rotate(1deg)';
+    });
+    
+    item.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1) rotate(0deg)';
+    });
+});
+
+/* Smooth Scroll Spy Navigation */
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.menu-btn a, .list-menu a');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 200) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').slice(1) === current) {
+            link.classList.add('active');
+        }
+    });
+});
+
+/* Form Input Animation */
+const inputs = document.querySelectorAll('input, textarea');
+inputs.forEach(input => {
+    input.addEventListener('focus', function() {
+        this.style.borderColor = '#bce70c';
+        this.style.boxShadow = '0 0 15px rgba(188, 231, 12, 0.3)';
+    });
+    
+    input.addEventListener('blur', function() {
+        this.style.borderColor = '#ccc';
+        this.style.boxShadow = 'none';
+    });
+});
+
+/* Award Box 3D Flip on Hover */
+document.querySelectorAll('.box-item').forEach(box => {
+    box.addEventListener('mouseenter', function() {
+        this.style.transform = 'perspective(1000px) rotateY(5deg) rotateX(-5deg)';
+    });
+    
+    box.addEventListener('mouseleave', function() {
+        this.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)';
+    });
+});
+
+/* Staggered Animation for List Items */
+const listItems = document.querySelectorAll('.side-menu-main .list-menu li, .Tabcondent .gallery-item');
+listItems.forEach((item, index) => {
+    item.style.animationDelay = (index * 0.1) + 's';
+});

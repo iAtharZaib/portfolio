@@ -379,6 +379,23 @@ body.dark-mode .hireMe-svg-side {
     align-items: center;
     gap: 10px;
 }
+
+/* Ripple Effect */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.8), rgba(255,255,255,0));
+    transform: scale(0);
+    animation: ripple-animation 0.6s ease-out;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
 .aryaBtn:hover {
     background: var(--main-text);
     color: var(--section-background);
@@ -1725,4 +1742,241 @@ button.bottom-top-button img {
 }
 button.bottom-top-button:hover {
     animation: animate-pulse 3s linear infinite;
+}
+
+/*-----------------------[ ENHANCED ATTRACTIONS ]------------------------*/
+
+/* Glowing Button Effects */
+.aryaBtn {
+    position: relative;
+    overflow: hidden;
+}
+
+.aryaBtn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.aryaBtn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.aryaBtn:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 
+                0 0 40px rgba(255, 255, 255, 0.15) !important;
+    transform: translateY(-2px);
+}
+
+body.dark-mode .aryaBtn:hover {
+    box-shadow: 0 0 20px rgba(188, 231, 12, 0.3), 
+                0 0 40px rgba(188, 231, 12, 0.15) !important;
+}
+
+/* Card Hover Lift Effect */
+.services-box,
+.gallery-item,
+.box-item,
+.contact-sec-box,
+.testimonial-box {
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    transform: translateY(0);
+}
+
+.services-box:hover,
+.gallery-item:hover,
+.box-item:hover,
+.contact-sec-box:hover,
+.testimonial-box:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .services-box:hover,
+body.dark-mode .gallery-item:hover,
+body.dark-mode .box-item:hover,
+body.dark-mode .contact-sec-box:hover,
+body.dark-mode .testimonial-box:hover {
+    box-shadow: 0 20px 40px rgba(188, 231, 12, 0.15);
+}
+
+/* Gradient Backgrounds */
+.section-one,
+.section-three,
+.section-five,
+.section-nine {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--section-background) 100%);
+}
+
+body.dark-mode .section-one,
+body.dark-mode .section-three,
+body.dark-mode .section-five,
+body.dark-mode .section-nine {
+    background: linear-gradient(135deg, #000000 0%, #1E1F21 100%);
+}
+
+/* Enhanced Animation Speed */
+.fade_up,
+.fade_down,
+.zoom_in,
+.zoom_out,
+.fade_right,
+.fade_left,
+.flip_left,
+.flip_right,
+.flip_up,
+.flip_down {
+    transition: all 1.2s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+/* Skill Progress Glow */
+.progress-item {
+    box-shadow: 0 0 20px rgba(188, 231, 12, 0.2);
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .progress-item {
+    box-shadow: 0 0 20px rgba(188, 231, 12, 0.3);
+}
+
+.progress-item:hover {
+    box-shadow: 0 0 30px rgba(188, 231, 12, 0.4);
+    transform: scale(1.05);
+}
+
+/* Design Skill Icons Glow */
+.design-skills-img-main {
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.design-skills-img-main:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 50px rgba(188, 231, 12, 0.25);
+}
+
+body.dark-mode .design-skills-img-main:hover {
+    box-shadow: 0 15px 50px rgba(188, 231, 12, 0.35);
+}
+
+/* Gallery Item Enhanced */
+.gallery-item-sub {
+    transition: all 0.4s ease;
+}
+
+.gallery-item:hover .gallery-item-sub {
+    transform: scale(1.08);
+    filter: brightness(1.1);
+}
+
+/* Text Glow Effect on Headers */
+.creative {
+    position: relative;
+}
+
+.creative::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    text-shadow: 0 0 10px rgba(188, 231, 12, 0.4),
+                 0 0 20px rgba(188, 231, 12, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.creative:hover::after {
+    opacity: 1;
+}
+
+/* Interactive Link Hover */
+a {
+    position: relative;
+}
+
+a:not(.aryaBtn)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--main-text);
+    transition: width 0.3s ease;
+}
+
+body.dark-mode a:not(.aryaBtn)::after {
+    background: #bce70c;
+}
+
+a:not(.aryaBtn):hover::after {
+    width: 100%;
+}
+
+/* Smooth Transitions */
+* {
+    transition: background-color 0.3s ease, 
+                color 0.3s ease,
+                border-color 0.3s ease;
+}
+
+/* Award Flip Enhanced */
+.flip-box-front {
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.box-item:hover .flip-box-front {
+    transform: rotateY(180deg) scale(1.05);
+}
+
+/* Contact Form Focus Animation */
+input,
+textarea {
+    transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    box-shadow: 0 0 15px rgba(188, 231, 12, 0.3);
+    transform: scale(1.01);
+}
+
+body.dark-mode input:focus,
+body.dark-mode textarea:focus {
+    box-shadow: 0 0 15px rgba(188, 231, 12, 0.5);
+}
+
+/* Enhanced Tab Buttons */
+.tab-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.tab-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--main-text);
+    z-index: -1;
+    transition: left 0.4s ease;
+}
+
+.tab-btn:hover::before {
+    left: 0;
+}
+
+.tab-btn:hover {
+    color: var(--section-background);
 }
