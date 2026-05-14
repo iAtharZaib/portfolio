@@ -1834,7 +1834,7 @@ body.dark-mode .section-nine {
 .flip_right,
 .flip_up,
 .flip_down {
-    transition: all 1.2s cubic-bezier(0.23, 1, 0.320, 1);
+    transition: all 1.5s cubic-bezier(0.23, 1, 0.320, 1) !important;
 }
 
 /* Skill Progress Glow */
@@ -1868,34 +1868,35 @@ body.dark-mode .design-skills-img-main:hover {
 }
 
 /* Gallery Item Enhanced */
+.gallery-item {
+    position: relative;
+    z-index: 1;
+}
+
 .gallery-item-sub {
     transition: all 0.4s ease;
+    overflow: hidden;
+    border-radius: 20px;
 }
 
 .gallery-item:hover .gallery-item-sub {
-    transform: scale(1.08);
-    filter: brightness(1.1);
+    filter: brightness(1.15) contrast(1.05);
 }
 
 /* Text Glow Effect on Headers */
 .creative {
     position: relative;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--main-text) 0%, var(--sub-text) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: all 0.3s ease;
 }
 
-.creative::after {
-    content: attr(data-text);
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    text-shadow: 0 0 10px rgba(188, 231, 12, 0.4),
-                 0 0 20px rgba(188, 231, 12, 0.2);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.creative:hover::after {
-    opacity: 1;
+.creative:hover {
+    text-shadow: 0 0 10px rgba(188, 231, 12, 0.3);
+    -webkit-text-fill-color: var(--main-text);
 }
 
 /* Interactive Link Hover */
@@ -1959,6 +1960,7 @@ body.dark-mode textarea:focus {
 .tab-btn {
     position: relative;
     overflow: hidden;
+    z-index: 1;
 }
 
 .tab-btn::before {
@@ -1978,5 +1980,13 @@ body.dark-mode textarea:focus {
 }
 
 .tab-btn:hover {
-    color: var(--section-background);
+    color: var(--section-background) !important;
+    background: var(--main-text);
+    border-color: var(--main-text);
+}
+
+body.dark-mode .tab-btn:hover {
+    background: #bce70c;
+    color: #000000 !important;
+    border-color: #bce70c;
 }

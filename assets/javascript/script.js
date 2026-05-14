@@ -253,7 +253,8 @@ window.addEventListener("scroll", activeMenu);
 /*------------------------------------- ENHANCED INTERACTIVE EFFECTS -------------------------------------*/
 
 /* Smooth Parallax Scroll Effect */
-window.addEventListener('scroll', () => {
+/* DISABLED - was causing layout issues */
+/* window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const parallaxElements = document.querySelectorAll('.fade_up, .fade_down, .zoom_in');
     
@@ -262,7 +263,7 @@ window.addEventListener('scroll', () => {
             el.style.transform = `translateY(${scrolled * 0.05 * (index % 2 === 0 ? 1 : -1)}px)`;
         }
     });
-});
+}); */
 
 /* Button Ripple Effect */
 document.querySelectorAll('.aryaBtn').forEach(btn => {
@@ -284,8 +285,8 @@ document.querySelectorAll('.aryaBtn').forEach(btn => {
     });
 });
 
-/* Gallery Image Zoom on Hover */
-document.querySelectorAll('.gallery-item-sub').forEach(item => {
+/* Gallery Image Zoom on Hover - DISABLED to prevent title overlap */
+/* document.querySelectorAll('.gallery-item-sub').forEach(item => {
     item.addEventListener('mouseenter', function() {
         this.style.transform = 'scale(1.12) rotate(1deg)';
     });
@@ -293,7 +294,7 @@ document.querySelectorAll('.gallery-item-sub').forEach(item => {
     item.addEventListener('mouseleave', function() {
         this.style.transform = 'scale(1) rotate(0deg)';
     });
-});
+}); */
 
 /* Smooth Scroll Spy Navigation */
 const sections = document.querySelectorAll('section');
