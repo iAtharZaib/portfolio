@@ -86,11 +86,11 @@
                             <img class="logo" src="assets/images/svg/logo.svg" alt="logo">
                         </a>
                         <div class="portfolio-girl-menu-main">
-                            <img src="assets/images/gallery/athar-160.jpg" alt="portfolio-girl-menu">
+                            <img src="assets/images/gallery/athar_160.png" alt="portfolio-girl-menu">
                         </div>
                         <div class="list-menu">
                             <p class="side-menu-arya">Athar Zaib</p>
-                            <p class="web-arya">Senior Mobile & Web Applications Developer</p>
+                            <p class="web-arya">Senior Consultant</p>
                             <div class="media-main">
                                 <a href="https://www.linkedin.com/atharzaib" target="_blank"class="media-icons">
                                     <img src="assets/images/svg/linkdin.svg" alt="linkdin">
@@ -186,7 +186,7 @@
                             </div>
                             <div class="col-xxl-6 col-xl-6 col-lg-6 portfolio-girl-img-col">
                                 <div class="position-relative zoom_in">
-                                    <img class="portfolio-girl-img" src="assets/images/gallery/athar-300.jpg"
+                                    <img class="portfolio-girl-img" src="assets/images/gallery/athar_300.png"
                                         alt="portfolio-girl">
                                     <div class="girl-name">
                                         <p class="ityped">I’M ATHAR ZAIB_</p>
@@ -210,7 +210,7 @@
                                         </div>
                                     </div>
                                     <div class="yer-exp-box counter fade_down">
-                                        <p class="degit count" data-count="21">0</p>
+                                        <p class="degit count" data-count="18">0</p>
                                         <div>
                                             <p>k+</p>
                                             <p>Work Hours</p>
@@ -242,10 +242,6 @@
                                     <div class="about-detail-main">
                                         <p class="about-detail">Name</p>
                                         <p class="about-detail-info">Athar Zaib</p>
-                                    </div>
-                                    <div class="about-detail-main">
-                                        <p class="about-detail">Nationality</p>
-                                        <p class="about-detail-info">Pakistani</p>
                                     </div>
                                     <div class="about-detail-main">
                                         <p class="about-detail">Phone</p>
@@ -811,6 +807,18 @@ I highly recommend Athar for any team looking for a talented and dedicated Senio
                             </div>
                             <div class="col-xxl-6 col-lg-6">
                                 <h2 class="creative brand fade_up">Experience.</h2>
+                                    <div class="education fade_up">
+                                    <div class="side_circle_ring">
+                                        <div class="small_yellow_border">
+                                            <div class="small_yellow_circle"></div>
+                                        </div>
+                                    </div>
+                                    <div class="small_yellow_border_main">
+                                        <p class="bachelor">Senior Associate Consultant</p>
+                                        <p class="cursus university">Techvista (Systems Limited) UAE /  Current</p>
+                                        <p class="cursus">Managed web application development and system integrations, enhancing performance, refining backend workflows, and coordinating deployments while supporting the team in building scalable and efficient platforms.</p>
+                                    </div>
+                                </div>
                                 <div class="education fade_up">
                                     <div class="side_circle_ring">
                                         <div class="small_yellow_border">
@@ -819,8 +827,8 @@ I highly recommend Athar for any team looking for a talented and dedicated Senio
                                     </div>
                                     <div class="small_yellow_border_main">
                                         <p class="bachelor">Senior Front End Developer</p>
-                                        <p class="cursus university">du, UAE / 2023 - Current</p>
-                                        <p class="cursus">Directed mobile app development and integrations, optimizing performance, API workflows, and releases while mentoring the team to deliver reliable, high-quality solutions.
+                                        <p class="cursus university">du, UAE / 2025</p>
+                                        <p class="cursus"><p class="cursus">Led mobile app development and integrations, enhancing performance, streamlining API workflows, and managing releases while mentoring the team to deliver dependable, high-quality solutions.
                                         </p>
                                     </div>
                                 </div>
@@ -1122,7 +1130,7 @@ I highly recommend Athar for any team looking for a talented and dedicated Senio
                             <div class="input-main">
                                 <div class="labal-input">
                                     <p class="labal">NAME*</p>
-                                    <input type="text" placeholder="Your Full Name" name="YourName" autocomplete="off"
+                                    <input type="text" placeholder="Your Name" name="YourName" autocomplete="off"
                                         required>
                                 </div>
                                 <div class="labal-input">
@@ -1166,7 +1174,7 @@ I highly recommend Athar for any team looking for a talented and dedicated Senio
                     <!-- ====================================== Footer ===================================== -->
                     <footer>
                         <div class="rights-reserved">
-                            <h2>© 2025 - All rights reserved by
+                            <h2>© <span id="currentYear"></span> - All rights reserved by
                                 <a href="#">Athar Zaib.</a>
                             </h2>
 
@@ -1369,6 +1377,10 @@ I highly recommend Athar for any team looking for a talented and dedicated Senio
                 mainBtn.click();
             }
         });
+        const currentYearEl = document.getElementById('currentYear');
+        if (currentYearEl) {
+            currentYearEl.textContent = new Date().getFullYear();
+        }
         const form = document.getElementById('contactForm');
         const messageEl = document.getElementById('formMessage');
         const btn = form.querySelector('.aryaBtn');
